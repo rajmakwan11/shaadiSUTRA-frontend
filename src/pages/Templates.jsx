@@ -29,7 +29,7 @@ function Templates() {
           >
             <div className="w-full h-96 bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center">
               <img
-                src={`${import.meta.env.VITE_BACKEND_URL}${template.image}`}
+                src={`${template.image}`}
                 alt={template.title}
                 className="max-h-full max-w-full object-contain"
               />
