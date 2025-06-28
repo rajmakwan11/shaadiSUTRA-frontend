@@ -20,7 +20,7 @@ const VerifyOtp = () => {
   try {
     // ✅ Verify OTP
     await api.post(
-      "api/user/verify-otp",
+      "/user/verify-otp",
       { email, otp },
       { withCredentials: true }
     );
