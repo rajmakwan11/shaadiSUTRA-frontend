@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import api from "../api/axiosConfig";
+
 
 const FormPage = () => {
   const { id: templateId } = useParams();
@@ -44,8 +46,8 @@ const FormPage = () => {
   setSuccess("");
 
   try {
-    const res = await axios.post(
-      "http://localhost:3000/submitForm",
+    const res = await api.post(
+      "/submitForm",
       { ...formData, templateId },
       { withCredentials: true }
     );
